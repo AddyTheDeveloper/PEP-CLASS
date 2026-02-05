@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Navbar</title>
+
+<style>
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* navbar container */
+nav {
+  padding: 10px;
+}
+
+/* menu list */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+/* menu items */
+li {
+  border: 1px solid #000;
+  padding: 10px 15px;
+}
+
+/* links */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* small screen */
+@media (max-width: 520px) {
+  ul {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#">Signup</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>

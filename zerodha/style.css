@@ -1,0 +1,190 @@
+/* Base Styles and Variables */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --primary-blue: #387ed1;
+    --text-grey: #666;
+    --text-black: #424242;
+    --border-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: var(--text-black);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-grey);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-blue);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow like original */
+}
+
+nav .logo img {
+    height: 20px;
+}
+
+nav .links {
+    display: flex;
+    gap: 30px;
+}
+
+nav .links a {
+    font-size: 14px;
+    color: #666;
+}
+
+nav .links a:hover {
+    color: var(--primary-blue);
+}
+
+/* Mobile Icon (Burger) - Hidden on desktop for now */
+.menu-icon {
+    display: none;
+}
+
+/* Utility */
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
+}
+
+.text-grey {
+    color: #666;
+}
+
+/* Grid System (Simple Flexbox Column) */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Vertically center */
+    justify-content: space-between;
+}
+
+.col-6 {
+    flex: 0 0 48%;
+    /* 2 columns with gap */
+    max-width: 48%;
+}
+
+.col-3 {
+    flex: 0 0 23%;
+    max-width: 23%;
+    align-self: flex-start;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #2a5da1;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #fbfbfb;
+    border-top: 1px solid #eee;
+    padding: 50px 0;
+    margin-top: 50px;
+}
+
+footer h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+
+footer ul li a:hover {
+    color: var(--primary-blue);
+}
+
+.footer-logo img {
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #9b9b9b;
+    margin-top: 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons i {
+    font-size: 18px;
+    color: #666;
+}
+
+.footer-disclosure {
+    font-size: 10px;
+    color: #9b9b9b;
+    line-height: 1.6;
+    margin-top: 40px;
+}

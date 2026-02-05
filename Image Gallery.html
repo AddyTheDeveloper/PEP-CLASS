@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.header{
+    text-align:center;
+    padding:30px;
+}
+
+.header h1{
+    font-size:36px;
+    color:#333;
+}
+
+.gallery{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(3, 300px);
+    gap:20px;
+    justify-content:center;
+}
+
+.image-box{
+    width:300px;
+    height:220px;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.image-box::after{
+    content:'\f030';
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:40px;
+    color:white;
+    opacity:0;
+    transition:0.4s;
+}
+
+.image-box:hover img{
+    opacity:0.5;
+    transform:scale(1.05);
+}
+
+.image-box:hover::after{
+    opacity:1;
+}
+</style>
+</head>
+<body>
+
+<div class="header" style="background-color: pink;">
+    <h1>Image Gallery</h1>
+</div>
+
+<div class="gallery">
+    <div class="image-box"><img src="https://picsum.photos/600/400?1"></div>
+    <div class="image-box"><img src="https://picsum.photos/600/400?2"></div>
+    <div class="image-box"><img src="https://picsum.photos/600/400?3"></div>
+
+    <div class="image-box"><img src="https://picsum.photos/600/400?4"></div>
+    <div class="image-box"><img src="https://picsum.photos/600/400?5"></div>
+</div>
+
+</body>
+</html>
