@@ -1,13 +1,18 @@
-let display = document.getElementById("display")
+const display = document.getElementById("display")
+const buttons = document.querySelectorAll("button")
 
-function press(value) {
-  display.value += value
-}
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const value = btn.innerText
 
-function calculate() {
-  display.value = eval(display.value)
-}
-
-function clearDisplay() {
-  display.value = ""
-}
+    if (value === "C") {
+      display.value = ""
+    } 
+    else if (value === "=") {
+      display.value = eval(display.value)
+    } 
+    else {
+      display.value += value
+    }
+  })
+})
