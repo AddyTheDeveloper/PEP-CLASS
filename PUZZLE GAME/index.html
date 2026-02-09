@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete the Image</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Complete the Image</h1>
+
+<div class="container">
+  <div class="section">
+    <h2>Reference</h2>
+    <img src="Ref.jpeg" class="reference">
+  </div>
+
+  <div class="section">
+    <h2>Pieces</h2>
+    <div class="puzzle">
+      <div class="slot" data-pos="0"></div>
+      <div class="slot" data-pos="1"></div>
+      <div class="slot" data-pos="2"></div>
+      <div class="slot" data-pos="3"></div>
+    </div>
+  </div>
+</div>
+
+<div class="pieces">
+  <img src="1.jpeg" class="piece" draggable="true" data-pos="0">
+  <img src="2.jpeg" class="piece" draggable="true" data-pos="1">
+  <img src="3.jpeg" class="piece" draggable="true" data-pos="2">
+  <img src="4.jpeg" class="piece" draggable="true" data-pos="3">
+</div>
+
+<h3 id="status">🧩 Arrange the pieces</h3>
+
+<script src="script.js"></script>
+</body>
+</html>
