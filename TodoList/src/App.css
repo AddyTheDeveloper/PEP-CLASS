@@ -30,9 +30,18 @@ body {
 }
 
 .app-container {
-  width: 100%;
-  max-width: 600px;
+  width: 95%;
+  max-width: 1200px;
+  /* Wider for dashboard view */
   padding: 20px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  /* Tighter gap for better symmetry */
+  align-items: start;
 }
 
 .glass-container {
@@ -55,9 +64,33 @@ body {
 
 .task-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
+  align-items: stretch;
+  /* Stretch items to same height */
+}
+
+.task-form h2 {
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.task-form>input {
+  flex: 2;
+  min-width: 200px;
+}
+
+.task-form .input-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.task-form button {
+  flex: 0 0 auto;
 }
 
 .glass-input {
@@ -98,7 +131,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .glass-button {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  border: none;
+  border: 1px solid transparent;
+  /* Match input border width */
   padding: 12px;
   border-radius: 12px;
   color: white;
@@ -410,4 +444,25 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-color: var(--primary-color);
   box-shadow: 0 0 15px rgba(13, 148, 136, 0.2);
   background: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-form>input,
+  .task-form .input-group {
+    width: 100%;
+  }
 }

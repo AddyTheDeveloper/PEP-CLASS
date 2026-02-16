@@ -67,17 +67,19 @@ function App() {
         <h1 className="app-title">✨ Task Master</h1>
         <TaskForm onAddTask={addTask} />
 
-        <TaskList
-          tasks={activeTasks}
-          onDelete={deleteTask}
-          onComplete={markAsCompleted}
-          onExpire={markAsFailed}
-        />
+        <div className="content-grid">
+          <TaskList
+            tasks={activeTasks}
+            onDelete={deleteTask}
+            onComplete={markAsCompleted}
+            onExpire={markAsFailed}
+          />
 
-        <TaskSummary
-          completedTasks={completedTasks}
-          failedTasks={failedTasks}
-        />
+          <TaskSummary
+            completedTasks={completedTasks}
+            failedTasks={failedTasks}
+          />
+        </div>
       </div>
       {toast && (
         <Toast
