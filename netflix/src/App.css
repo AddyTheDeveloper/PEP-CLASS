@@ -4,7 +4,7 @@
   min-height: 100vh;
 }
 
-/* Netflix Style: Pull the first row up to overlap the banner's fade */
+
 .app>.row:first-of-type {
   margin-top: -150px;
   position: relative;
