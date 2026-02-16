@@ -1,16 +1,69 @@
-# React + Vite
+# ✨ Task Master - Premium React To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, high-performance To-Do application built with React and Vite. Features a glassmorphism design, countdown timers, and detailed task tracking.
 
-Currently, two official plugins are available:
+![Task Master Preview](https://via.placeholder.com/800x400?text=Task+Master+App+Preview)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+-   **Smart Task Management**: Add tasks with specific due dates and times.
+-   **⏳ Live Countdowns**: Real-time countdown timers for every task.
+-   **⚡ Auto-Expire Logic**: Tasks automatically move to "Failed" when time runs out.
+-   **📊 Summary Dashboard**: Track your productivity with a history of Completed vs. Failed tasks.
+-   **🎨 Premium UI**:
+    -   **Glassmorphism Design**: Modern, frosted-glass aesthetics.
+    -   **Morning Mist Theme**: A clean, airy light theme with Teal & Sky Blue accents.
+    -   **Smooth Animations**: Slide-ins, fades, and interactive hover effects.
+    -   **Toast Notifications**: Instant visual feedback for all actions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+-   **Framework**: React 18
+-   **Build Tool**: Vite
+-   **Styling**: Pure CSS3 (CSS Variables, Flexbox, Grid, Keyframe Animations)
+-   **Fonts**: [Outfit](https://fonts.google.com/specimen/Outfit) (Google Fonts)
+-   **Persistence**: LocalStorage (Data survives page reloads)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏃‍♂️ How to Run
+
+1.  **Clone the repository** (if applicable)
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Start Development Server**:
+    ```bash
+    npm run dev
+    ```
+4.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+```text
+src/
+├── assets/          # Static assets (images, icons)
+├── components/      # Reusable UI components
+│   ├── TaskForm.jsx    # Input form for new tasks
+│   ├── TaskItem.jsx    # Individual task card with timer logic
+│   ├── TaskList.jsx    # Container for active tasks
+│   ├── TaskSummary.jsx # Dashboard for Completed/Failed history
+│   └── Toast.jsx       # Notification system
+├── App.css          # Global styles, variables, and animations
+├── App.jsx          # Main application logic and state management
+└── main.jsx         # Application entry point
+```
+
+## 💡 Usage Guide
+
+1.  **Add a Task**: Enter a task description, select a date, and pick a time.
+2.  **Track It**: Watch the countdown timer tick down.
+3.  **Complete It**: Click the ✅ button before time runs out to mark it as success.
+4.  **Delete It**: Click 🗑️ to remove a task.
+5.  **Review**: Check the bottom section to see your history of triumphs and missed deadlines.
+
+---
+
+**Developed with ❤️ using React & CSS.**
